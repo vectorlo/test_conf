@@ -1,0 +1,25 @@
+### Cisco
+conf t
+
+interface f0/0
+ ip add 10.0.0.1 255.0.0.0
+ no shutdown
+ exit
+
+interface f1/0
+  ip add 11.0.0.1 255.0.0.0
+  no shutdown
+  exit
+
+interface l0
+ ip add 1.1.1.1 255.255.255.255
+
+username cisco password cisco
+
+ip domain-name cisco
+crypto key generate rsa general-keys modulus 2048
+
+line vty 0 4
+ login local
+ transport input ssh
+ exit
