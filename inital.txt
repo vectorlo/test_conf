@@ -15,6 +15,7 @@ interface l0
  ip add 1.1.1.1 255.255.255.255
 
 username cisco password cisco
+username cisco privilege 15
 
 ip domain-name cisco
 crypto key generate rsa general-keys modulus 2048
